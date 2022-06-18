@@ -1,0 +1,28 @@
+<div class="container w-50 bg-light p-4 rounded" style="margin-top: 12%;">
+  <form class="px-4" #form="ngForm" (ngSubmit)="onSubmit(form);">
+    <h3 class="text-center">Codeforces rating newsletter</h3>
+    <div class="form-group">
+      <label for="handle">Codeforces handle</label>
+      <input
+        type="text"
+        class="form-control"
+        id="handle"
+        #handle="ngModel"
+        [(ngModel)]="userModel.handle"
+        placeholder="Enter codeforces handle"
+        name="handle"
+      />
+      <label for="email">Enter email that is registered on codeforces</label>
+      <input
+        type="email"
+        #email="ngModel"
+        [(ngModel)]="userModel.email"
+        class="form-control"
+        id="email"
+        name="email"
+        placeholder="Enter email"
+      />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
