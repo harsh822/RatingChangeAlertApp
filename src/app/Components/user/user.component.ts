@@ -1,7 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../../user';
-import { ContestDetailsService } from '../../Services/contest-details.service';
-import { SendEmailService } from '../../Services/send-email.service';
 import { UserDetailsService } from '../../Services/user-details.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
@@ -25,55 +22,11 @@ export class UserComponent implements OnInit {
   isSubmitDisable: boolean = false;
 
   constructor(
-    private contestDetail: ContestDetailsService,
-    private emailService: SendEmailService,
     private userService: UserDetailsService,
-    private http: HttpClient,
     private router: Router
   ) {}
 
-  ngOnInit(): void {
-    // var isTrue = false;
-    var c = 0;
-    // setInterval(
-    //   () =>
-    //     this.contestDetail.getData(c).then(
-    //       (response: any) => {
-    //         // isTrue = true;
-    //         c++;
-    //         var entry: any = Object.entries(response)[1][1];
-    //         console.log(entry);
-    //         // console.log(Object.entries(data)[1][1]);
-    //         console.log(Object.entries(response)[0][1]);
-    //         this.userService.getAll().then(
-    //           (data: any) => {
-    //             this.users = data;
-    //             console.log(data);
-    //             console.log(this.users);
-    //           },
-    //           (error: any) => {
-    //             console.log(error);
-    //           }
-    //         );
-    //         for (const key in entry) {
-    //           // console.log(this.users[0]);
-    //           for (let index = 0; index < this.users.length; index++) {
-    //             const element = Object.values(this.users[index]);
-    //             // console.log(element[1]);
-    //             if (entry[key].handle === element[1]) {
-    //               this.sendEmail(entry[key], element[2]);
-    //             }
-    //           }
-    //         }
-    //       },
-    //       (error: any) => {
-    //         // alert('An Unexpected Error Occured.');
-    //         console.log(error);
-    //       }
-    //     ),
-    //   10000
-    // );
-  }
+  ngOnInit(): void {}
 
   async onSubmit() {
     console.log(this.userForm);

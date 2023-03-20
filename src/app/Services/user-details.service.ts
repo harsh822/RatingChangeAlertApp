@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-const baseUrl = 'http://localhost:8080/api/users';
+const baseUrl =
+  'https://codeforces-contest-rating-alert-app.onrender.com/api/users';
 
 @Injectable({
   providedIn: 'root',
