@@ -12,7 +12,6 @@ export class UserDetailsService {
     return this.http.get(baseUrl);
   }
   create(data: any) {
-    // console.log("Inside the service");
     return this.http.post(baseUrl, data);
   }
   isValidCodeforcesUser(userDetails: any) {
